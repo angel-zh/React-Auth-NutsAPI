@@ -42,6 +42,7 @@ const NutShow = ({ user, msgAlert }) => {
     const handleUpdateNut = () => {
         nutUpdate(nut, user, id)
             .then(() => {
+                toggleShowUpdate()
                 msgAlert({
                     heading: 'Success',
                     message: 'Updating Nut',
@@ -83,10 +84,10 @@ const NutShow = ({ user, msgAlert }) => {
     }
 
     return (
-        <>
+        <div className='container-md mt-2'>
             <h3>{nut.name}</h3>
             <p>{nut.calories} calories per cup</p>
-            <button onClick={toggleShowUpdate}>Toggle Update</button>
+            <button onClick={toggleShowUpdate}>Edit</button>
             {isUpdateShown && (
                 <NutUpdate
                     nut={nut}
@@ -97,7 +98,7 @@ const NutShow = ({ user, msgAlert }) => {
                 <br />
                 <NutDelete handleDeleteNut={handleDeleteNut}
                 />
-        </>
+        </div>
     )
 }
 
