@@ -19,8 +19,13 @@ const authenticatedOptions = (
 			</Link>
 		</Nav.Item>
 		<Nav.Item>
-			<Link to='nuts' style={linkStyle}>
+			<Link to='create' style={linkStyle}>
 				Add a Nut
+			</Link>
+		</Nav.Item>
+		<Nav.Item>
+			<Link to='nuts' style={linkStyle}>
+				Index All Nuts
 			</Link>
 		</Nav.Item>
 	</>
@@ -48,7 +53,7 @@ const alwaysOptions = (
 )
 
 const Header = ({ user }) => (
-	<Navbar bg='primary' variant='dark' expand='md'>
+	<Navbar bg='info' variant='dark' expand='md'>
 		<Navbar.Brand>
             <Link to='/' style={linkStyle}>
                 react-auth-template

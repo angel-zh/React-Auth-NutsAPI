@@ -7,7 +7,7 @@ const NutCreate = ({ user, msgAlert }) => {
         name: '',
         type: ''
     }
-    
+
     const [nut, setNut] = useState(defaultNut)
 
     const handleChange = event => {
@@ -18,38 +18,43 @@ const NutCreate = ({ user, msgAlert }) => {
 
     const handleCreateNut = () => {
         nutCreate(nut, user)
-        .then(() => {
-            msgAlert({
-                heading: 'Success',
-                message: 'Created Nut',
-                variant: 'success'
+            .then(() => {
+                msgAlert({
+                    heading: 'Success',
+                    message: 'Created Nut',
+                    variant: 'success'
+                })
             })
-        })
-        .catch(error => {
-            msgAlert({
-                heading: 'Failure',
-                message: 'Create Nut Failure' + error,
-                variant: 'danger'
+            .catch(error => {
+                msgAlert({
+                    heading: 'Failure',
+                    message: 'Create Nut Failure' + error,
+                    variant: 'danger'
+                })
             })
-        })
     }
 
     return (
-        <>
-            <input 
+        <div className='container-md mt-2'>
+            <h1>Add a Nut</h1>
+            <label>Name: </label>
+            <input
                 type='text'
                 value={nut.name}
                 name='name'
+                placeholder='name of nut'
                 onChange={handleChange}
-            />
-            <input 
-                type='text'
-                value={nut.type}
-                name='type'
+            /><br />
+            <label>Calories: </label>
+            <input
+                type='number'
+                value={nut.calories}
+                name='calories'
+                placeholder='calories per cup'
                 onChange={handleChange}
-            />
+            /><br />
             <button onClick={handleCreateNut}>Create Nut</button>
-        </>
+        </div>
     )
 }
 
