@@ -15,7 +15,7 @@ const NutUpdate = ({ nut, handleChange, handleUpdateNut }) => {
             name='calories' 
             onChange={handleChange} 
             />
-			<button onClick={handleUpdateNut}>Confirm</button>
+			<button className='btn btn-success' onClick={handleUpdateNut}>Confirm</button>
 		</>
 	)
 }

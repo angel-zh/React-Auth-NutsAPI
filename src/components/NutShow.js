@@ -87,7 +87,7 @@ const NutShow = ({ user, msgAlert }) => {
         <div className='container-md mt-2'>
             <h3>{nut.name}</h3>
             <p>{nut.calories} calories per cup</p>
-            <button onClick={toggleShowUpdate}>Edit</button>
+            <button className='btn btn-primary' onClick={toggleShowUpdate}>Edit</button>
             {isUpdateShown && (
                 <NutUpdate
                     nut={nut}

@@ -7,7 +7,7 @@ const NutDelete = ({ handleDeleteNut }) => {
    
     return (
         <>
-            <button onClick={handleDeleteNut}>Delete</button>
+            <button className='btn btn-danger' onClick={handleDeleteNut}>Delete</button>
         </>
     )
 }

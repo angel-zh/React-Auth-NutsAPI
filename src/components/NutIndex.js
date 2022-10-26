@@ -23,7 +23,6 @@ const NutIndex = ({ user, msgAlert }) => {
     const allNutsJSX = allNuts.map(nut => {
         return (
             <div className='container-md mt-2'>
-                <h1>List of All Nuts</h1>
                 <Link to={nut._id} key={nut._id}>
                     <li>{nut.name}: {nut.calories} calories per cup</li>
                 </Link>
@@ -33,6 +32,7 @@ const NutIndex = ({ user, msgAlert }) => {
 
     return (
         <>
+            <h1 className='container-md mt-2'>List of All Nuts</h1>
             <ul>{allNutsJSX}</ul>
         </>
     )

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { nutCreate } from '../api/nut'
+import { useNavigate } from 'react-router-dom'
 
 
 const NutCreate = ({ user, msgAlert }) => {
@@ -9,6 +10,7 @@ const NutCreate = ({ user, msgAlert }) => {
     }
 
     const [nut, setNut] = useState(defaultNut)
+    const navigate = useNavigate()
 
     const handleChange = event => {
         // to keep the values as users input info
@@ -25,6 +27,7 @@ const NutCreate = ({ user, msgAlert }) => {
                     variant: 'success'
                 })
             })
+            .then(navigate('/nuts'))
             .catch(error => {
                 msgAlert({
                     heading: 'Failure',
@@ -53,7 +56,7 @@ const NutCreate = ({ user, msgAlert }) => {
                 placeholder='calories per cup'
                 onChange={handleChange}
             /><br />
-            <button onClick={handleCreateNut}>Create Nut</button>
+            <button className='btn btn-success' onClick={handleCreateNut}>Create Nut</button>
         </div>
     )
 }
