@@ -1,7 +1,7 @@
 let apiUrl
 const apiUrls = {
     // YOU MUST CHANGE PRODUCTION URL WHEN DEPLOYING
-	production: 'https://nuts-api.fly.dev/',
+	production: 'https://nuts-api.fly.dev',
 	development: 'http://localhost:8000',
 }
 
