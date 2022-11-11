@@ -12,9 +12,9 @@ import SignUp from './components/auth/SignUp'
 import SignIn from './components/auth/SignIn'
 import SignOut from './components/auth/SignOut'
 import ChangePassword from './components/auth/ChangePassword'
-import NutCreate from './components/NutCreate'
-import NutIndex from './components/NutIndex'
-import NutShow from './components/NutShow'
+import NutCreate from './components/nuts/NutCreate'
+import NutIndex from './components/nuts/NutIndex'
+import NutShow from './components/nuts/NutShow'
 
 const App = () => {
 

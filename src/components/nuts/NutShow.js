@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { nutShow, nutUpdate, nutDelete } from '../api/nut'
+import { nutShow, nutUpdate, nutDelete } from '../../api/nut'
 import NutDelete from './NutDelete'
 import NutUpdate from './NutUpdate'
 

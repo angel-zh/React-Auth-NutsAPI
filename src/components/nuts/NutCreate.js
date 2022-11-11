@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { nutCreate } from '../api/nut'
+import { nutCreate } from '../../api/nut'
 import { useNavigate } from 'react-router-dom'
 
 

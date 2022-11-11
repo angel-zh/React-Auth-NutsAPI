@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { nutIndex } from '../api/nut'
+import { nutIndex } from '../../api/nut'
 
 const NutIndex = ({ user, msgAlert }) => {
 
