@@ -8,22 +8,22 @@ const linkStyle = {
 }
 const authenticatedOptions = (
 	<>
-		<Nav.Item>
+		<Nav.Item className='mt-2 mx-2'>
 			<Link to='change-password' style={linkStyle}>
 				Change Password
 			</Link>
 		</Nav.Item>
-		<Nav.Item>
+		<Nav.Item className='mt-2 mx-2'>
 			<Link to='sign-out' style={linkStyle}>
 				Sign Out
 			</Link>
 		</Nav.Item>
-		<Nav.Item>
+		<Nav.Item className='mt-2 mx-2'>
 			<Link to='create' style={linkStyle}>
 				Add a Nut
 			</Link>
 		</Nav.Item>
-		<Nav.Item>
+		<Nav.Item className='mt-2 mx-2'>
 			<Link to='nuts' style={linkStyle}>
 				Index All Nuts
 			</Link>
@@ -33,10 +33,10 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
 	<>
-		<Nav.Item>
+		<Nav.Item className='mt-2 mx-2'>
 			<Link to='sign-up' style={linkStyle}>Sign Up</Link>
 		</Nav.Item>
-		<Nav.Item>
+		<Nav.Item className='mt-2 mx-2'>
 			<Link to='sign-in' style={linkStyle}>Sign In</Link>
 		</Nav.Item>
 	</>
